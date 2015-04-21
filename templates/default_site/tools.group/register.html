@@ -54,18 +54,18 @@
 			<input id="username" name="username" type="text" data-validate="onblur" data-type="any" data-isvalid="" data-error="who are you?" required />
 		</label>
 		
-		<label>
+		<label for="email">
 			Email: <small>required</small>
-			<input name="email" type="email" value="{email}" data-validate="onblur" data-type="email" data-isvalid="{if email}yes{/if}" data-error="we need a valid email adress!" required>
+			<input id="email" name="email" type="email" value="{email}" data-validate="onblur" data-type="email" data-isvalid="{if email}yes{/if}" data-error="we need a valid email adress!" required>
 		</label>
 
-		<label>
+		<label for="password">
 			Password: <small>required</small>
 			<input id="password" name="password" type="password" value="" data-validate="onblur" data-type="matching" data-mustmatch="password_confirm" data-isvalid="yes" data-error="this needs to match the password confirmation field." required />
 			<span class="note">Make it good.</span>
 		</label>
 		
-		<label>
+		<label for="password_confirm">
 			Password Confirmation: <small>required</small>
 			<input id="password_confirm" name="password_confirm" type="password" value="" data-validate="onblur" data-type="matching" data-mustmatch="password" data-isvalid="yes" data-error="this needs to match the password field." required />
 			<span class="note">Make it the same.</span>
