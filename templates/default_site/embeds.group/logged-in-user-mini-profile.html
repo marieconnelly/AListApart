@@ -7,13 +7,13 @@
 	{if:else}
 	<?php
 	$email = "{email}";
-	$default = "http://alistapart.com/d/_repo/img/FPO/avatar_generic-commenter_grey.png";
+	$default = "http://alistapart.com/components/assets/img/avatar_generic-commenter_grey.png";
 	$size = 40;
 	
 	$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
 	?>
 	<img class="commenter-avatar" src="<?php echo $grav_url; ?>" width="40" height="40" alt="" />
 	{/if}
-	{screen_name}&nbsp;&nbsp; <a href="/edit/profile/{member_id}">edit profile</a>&nbsp;·&nbsp;<a href="{path='logout'}">log out</a>
-	<span class="user-url">{url}</span>
-	{/exp:user:stats}
+	{screen_name}&nbsp;&nbsp; <a href="/edit/profile/{member_id}">edit profile</a>&nbsp;·&nbsp;{/exp:user:stats}{if logged_in}<a href="{exp:freemember:logout_url}">log out</a>{/if}
+	{exp:user:stats dynamic="off" username="{embed:logged_in_user_name}"}<span class="user-url">{url}</span>{/exp:user:stats}
+	

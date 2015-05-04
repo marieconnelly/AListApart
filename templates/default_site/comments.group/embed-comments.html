@@ -1,12 +1,12 @@
 						<ol class="article-comments" id="comments-parent" data-xid="{XID_HASH}">
 							
-							{exp:comment:entries sort="asc" dynamic="no" url_title="{segment_3}" limit="999"}
+							{exp:comment:entries sort="asc" dynamic="no" url_title="{segment_2}" limit="999"}
 							{single-comment}
 							{/exp:comment:entries}
 							
-							{exp:channel:entries limit="1" dynamic="no" url_title="{segment_3}"}
+							{exp:channel:entries limit="1" dynamic="no" url_title="{segment_2}"}
 							
-							{if segment_4 == "login-return"}
+							{!--if segment_4 == "login-return"}
 							
 								{if channel_short_name == "articles"}
 									{redirect="article/{segment_3}#comment-form"}
@@ -25,8 +25,10 @@
 								{if:elseif channel_short_name == "blog"}
 									{redirect="blog/post/{segment_3}#latest"}
 								{/if}
+
+							{/if--}
 							
-							{if:elseif allow_comments}
+							{if allow_comments}
 									
 									{if logged_in} 
 	 									{comment-form}

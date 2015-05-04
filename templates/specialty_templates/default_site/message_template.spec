@@ -11,6 +11,7 @@
 	<meta charset="utf-8">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	{meta_refresh}
 
 	<meta name="viewport" content="width=device-width">
 	
@@ -38,8 +39,8 @@
 	<h2>{heading}...</h2>
 	
 	{content}
-	
-	<p><span class="hide-from-no-js"><a href="javascript:history.go(-1)">Go back</a> or </span><a href="/">Go home.</a></p>
+	<p>{link}</p>
+	<!--<p><span class="hide-from-no-js"><a href="javascript:history.go(-1)">Go back</a> or </span><a href="/">Go home.</a></p>-->
 
 <!--<script>
 	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

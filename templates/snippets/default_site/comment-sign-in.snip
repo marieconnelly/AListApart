@@ -6,7 +6,7 @@
 								<p>Discuss this article. We reserve the right to delete flames, trolls, and wood nymphs.</p>
 								
 								<!-- I don't know why, but I had to move the login form above the login options so that EE would generate the current_url correctly. -->
-								{exp:member:login_form return="http://alistapart.com/{current_url}/login-return" id="sign-in-form" class="sign-in-form"}
+								{exp:freemember:login return="PREVIOUS_URL" form_id="sign-in-form" form_class="sign-in-form"}
 								
 									<label for="login-name-here">
 										Username <small>(<a id="show-registration-form" href="/utilities/register">need an account?</a>)</small>
@@ -22,14 +22,14 @@
 									
 									<p class="never-mind">(<a id="cancel-login" href="{exp:current_url:full_url}/login-return">never mind</a>)</p>
 								
-								{/exp:member:login_form}
+								{/exp:freemember:login}
 								
 								<div id="login-buttons" class="active">
 									<h4>Sign in with:</h4>
 								
 									<ul class="login-buttons">
-										<li class="twitter"><a href="http://alistapart.com/?ACT=59&provider=twitter&RET={exp:current_url:full_url}/login-return">Twitter</a></li><!--
-										--><li class="facebook"><a href="http://alistapart.com/?ACT=59&provider=facebook&RET={exp:current_url:full_url}/login-return">Facebook</a></li><!--
+										<li class="twitter"><a href="http://dev.alistapart.local/?ACT=154&provider=twitter&RET={exp:current_url:full_url}/login-return">Twitter</a></li><!--
+										--><li class="facebook"><a href="http://dev.alistapart.local/?ACT=154&provider=facebook&RET={exp:current_url:full_url}/login-return">Facebook</a></li><!--
 										--><li class="ala"><a id="show-native-login" href="/tools/login">A List Apart</a></li>
 									</ul>
 								</div>
